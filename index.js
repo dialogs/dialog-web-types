@@ -235,6 +235,7 @@ export type Message = {
 export type MessagesUpdate = {
   messages: Message[],
   overlays: MessageOverlay[],
+  isLoaded: boolean,
   receiveDate: number,
   readDate: number,
   readByMeDate: number
