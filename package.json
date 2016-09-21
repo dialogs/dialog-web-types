@@ -1,0 +1,34 @@
+{
+  "name": "@dlghq/dialog-types",
+  "version": "0.0.0",
+  "description": "Flow types for Dialog projects",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "utils.js",
+    ".flowconfig"
+  ],
+  "scripts": {
+    "pretest": "eslint *.js",
+    "test": "flow check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dialogs/dialog-web-types.git"
+  },
+  "keywords": [
+    "dialog",
+    "flow",
+    "types"
+  ],
+  "author": "Nikita Gusakov <gusnkt@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dialogs/dialog-web-types/issues"
+  },
+  "homepage": "https://github.com/dialogs/dialog-web-types#readme",
+  "devDependencies": {
+    "@dlghq/eslint-config-dialog": "1.7.0",
+    "eslint": "3.5.0"
+  }
+}

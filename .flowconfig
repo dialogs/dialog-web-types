@@ -1,0 +1,5 @@
+[ignore]
+.*/__tests__/.*
+
+[options]
+module.use_strict=true
