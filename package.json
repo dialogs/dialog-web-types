@@ -9,8 +9,11 @@
     ".flowconfig"
   ],
   "scripts": {
-    "pretest": "eslint *.js",
-    "test": "flow check"
+    "pretest": "eslint . && flow check",
+    "test": "jest",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,9 @@
   },
   "homepage": "https://github.com/dialogs/dialog-web-types#readme",
   "devDependencies": {
+    "@dlghq/babel-preset-dialog": "^2.2.0",
     "@dlghq/eslint-config-dialog": "1.7.0",
-    "eslint": "3.5.0"
+    "eslint": "3.5.0",
+    "jest-cli": "^15.1.1"
   }
 }
