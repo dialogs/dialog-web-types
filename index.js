@@ -183,7 +183,17 @@ export type MessageMediaWebsite = {
   }
 };
 
-export type MessageMedia = MessageMediaImage | MessageMediaWebsite;
+export type MessageMediaAudio = {
+  type: 'audio',
+  content: {
+    fileUrl: string,
+    fileSize: number,
+    mimeType: string,
+    duration: number
+  }
+};
+
+export type MessageMedia = MessageMediaImage | MessageMediaWebsite | MessageMediaAudio;
 
 export type MessageContentText = {
   type: 'text',
