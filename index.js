@@ -37,9 +37,11 @@ export type Contact = {
   avatar: ?string
 };
 
+export type PeerType = 'user' | 'group';
+
 export type Peer = {
   id: number,
-  type: 'user' | 'group',
+  type: PeerType,
   key?: string
 };
 
