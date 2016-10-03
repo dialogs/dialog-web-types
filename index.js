@@ -338,7 +338,6 @@ export type Typing = {
 export type ProfileSettings = {
   isSendByEnter: boolean,
   isSoundEffectsEnabled: boolean,
-  isNotificationsEnabled: boolean,
   isOnlyMentionNotifications: boolean,
   isGroupsNotificationsEnabled: boolean,
   isShowNotificationsTextEnabled: boolean
