@@ -3,6 +3,9 @@
  * @flow
  */
 
+export type AvatarPlaceholder = 'empty' | 'lblue' | 'blue' | 'purple' |
+                                'red' | 'orange' | 'yellow' | 'green';
+
 export type AuthError = {
   tag: string,
   message: string,
@@ -33,7 +36,7 @@ export type Binding = {
 export type Contact = {
   uid: number,
   name: string,
-  placeholder: string,
+  placeholder: AvatarPlaceholder,
   avatar: ?string
 };
 
@@ -50,7 +53,7 @@ export type PeerInfo = {
   title: string,
   userName: ?string,
   avatar: ?string,
-  placeholder: string,
+  placeholder: AvatarPlaceholder,
   isVerified: ?boolean
 };
 
@@ -273,7 +276,7 @@ export type User = {
   emails: Email[],
   avatar: ?string,
   bigAvatar: ?string,
-  placeholder: string,
+  placeholder: AvatarPlaceholder,
   isContact: boolean,
   isBot: boolean,
   isOnline: boolean,
@@ -303,7 +306,7 @@ export type Group = {
   about: ?string,
   avatar: ?string,
   bigAvatar: ?string,
-  placeholder: string,
+  placeholder: AvatarPlaceholder,
   adminId: number,
   members: GroupMember[]
 };
