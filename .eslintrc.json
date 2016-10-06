@@ -2,5 +2,8 @@
   "extends": "@dlghq/eslint-config-dialog",
   "env": {
     "jest": true
+  },
+  "rules": {
+    "max-lines": 0
   }
 }

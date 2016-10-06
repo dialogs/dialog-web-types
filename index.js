@@ -299,9 +299,11 @@ export type GroupMember = {
   canKick: boolean
 };
 
+export type GroupType = 'group' | 'channel';
+
 export type Group = {
   id: number,
-  type: 'group' | 'channel',
+  type: GroupType,
   name: string,
   about: ?string,
   avatar: ?string,
