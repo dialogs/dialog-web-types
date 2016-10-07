@@ -34,6 +34,7 @@
     "@dlghq/babel-preset-dialog": "2.3.1",
     "@dlghq/eslint-config-dialog": "1.9.0",
     "eslint": "3.7.1",
+    "flow-bin": "0.33.0",
     "jest-cli": "16.0.1"
   }
 }
