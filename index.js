@@ -340,7 +340,7 @@ export type Typing = {
   typing: ?string
 };
 
-export type Settings = {
+export type ProfileSettings = {
   isSendByEnter: boolean,
   isSoundEffectsEnabled: boolean,
   isOnlyMentionNotifications: boolean,
