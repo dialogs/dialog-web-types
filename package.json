@@ -1,6 +1,6 @@
 {
   "name": "@dlghq/dialog-types",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Flow types for Dialog projects",
   "main": "index.js",
   "files": [
