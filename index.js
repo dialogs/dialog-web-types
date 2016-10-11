@@ -310,7 +310,8 @@ export type Group = {
   bigAvatar: ?string,
   placeholder: AvatarPlaceholder,
   adminId: number,
-  members: GroupMember[]
+  members: GroupMember[],
+  canSendMessage: ?boolean
 };
 
 export type GroupOnline = {
