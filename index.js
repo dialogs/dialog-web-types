@@ -354,3 +354,8 @@ export type ConnectionStatus = 'online' | 'connecting' | 'updating';
 export type Counter = {
   counter: number
 };
+
+export type BotCommand = {
+  command: string,
+  description: string
+};
