@@ -361,6 +361,6 @@ export type BotCommand = {
 };
 
 export type ChatInfo = (
-  { type: 'user', user: User, online: UserOnline } |
-  { type: 'group', group: Group, online: GroupOnline }
+  { type: 'user', user: ?User, online: ?UserOnline } |
+  { type: 'group', group: ?Group, online: ?GroupOnline }
 );
