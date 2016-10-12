@@ -311,14 +311,14 @@ export type Group = {
   placeholder: AvatarPlaceholder,
   adminId: number,
   members: GroupMember[],
+  isMember: boolean,
   canSendMessage: ?boolean
 };
 
 export type GroupOnline = {
   total: number,
   online: number,
-  message: string,
-  isNotMember: boolean
+  message: string
 };
 
 export type Sticker = {
