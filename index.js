@@ -338,7 +338,8 @@ export type Call = {
 };
 
 export type Typing = {
-  typing: ?string
+  typing: ?string,
+  members: number[]
 };
 
 export type ProfileSettings = {
