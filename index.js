@@ -90,6 +90,11 @@ export type DialogGroup = {
   shorts: ShortRecent[]
 };
 
+export type ArchivedDialogs = {
+  shorts: ShortRecent[],
+  nextOffset: string
+};
+
 export type ChatSettings = {
   isNotificationsEnabled: boolean
 };
