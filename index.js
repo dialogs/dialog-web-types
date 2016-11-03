@@ -92,7 +92,7 @@ export type DialogGroup = {
 
 export type ArchivedDialogs = {
   shorts: ShortRecent[],
-  nextOffset: string
+  nextOffset: ?string
 };
 
 export type ChatSettings = {
