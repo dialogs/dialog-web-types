@@ -103,6 +103,13 @@ export type SearchEntity = {
   peerInfo: PeerInfo
 };
 
+export type SearchPeerEntity = {
+  peer: Peer,
+  title: string,
+  avatar: ?string,
+  matchString: ?string
+};
+
 export type MessageContentContact = {
   type: 'contact',
   name: string,
