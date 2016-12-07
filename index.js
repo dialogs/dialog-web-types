@@ -324,7 +324,9 @@ export type Group = {
   adminId: number,
   members: GroupMember[],
   isMember: boolean,
-  canSendMessage: ?boolean
+  canSendMessage: ?boolean,
+  shortname: ?string,
+  topic: ?string
 };
 
 export type GroupOnline = {
