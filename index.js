@@ -110,6 +110,11 @@ export type SearchPeerEntity = {
   matchString: ?string
 };
 
+export type RawData = {
+  type: string,
+  data: Uint8Array
+};
+
 export type MessageContentContact = {
   type: 'contact',
   name: string,
@@ -215,7 +220,8 @@ export type MessageMedia = MessageMediaImage | MessageMediaWebsite | MessageMedi
 export type MessageContentText = {
   type: 'text',
   text: string,
-  media: ?MessageMedia
+  media: ?MessageMedia,
+  extensions: RawData[]
 };
 
 export type MessageContentUnsupported = {
