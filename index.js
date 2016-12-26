@@ -289,6 +289,7 @@ export type User = {
   name: string,
   nick: ?string,
   about: ?string,
+  sex: string,
   timeZone: ?string,
   phones: Phone[],
   emails: Email[],
