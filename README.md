@@ -1,5 +1,5 @@
-Dialog Web Types
-================
+dialog types
+============
 
 Flow types for [dialog](https://dlg.im) projects.
 
@@ -14,7 +14,7 @@ Usage
 -----
 
 ```js
-/**
+/*
  * @flow
  */
 
