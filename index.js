@@ -358,6 +358,21 @@ export type Call = {
   isOutgoing: boolean
 };
 
+export type CallInfo = {
+  id: string,
+  date: Date,
+  initiator: PeerInfo,
+  recipient: PeerInfo,
+  duration: number,
+  isAnswered: boolean,
+  isFinished: boolean
+};
+
+export type RecentCalls = {
+  calls: CallInfo[],
+  nextOffset: string
+};
+
 export type Typing = {
   typing: ?string,
   members: number[]
