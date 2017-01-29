@@ -255,7 +255,7 @@ export type Message = {
   rid: string,
   date: string,
   fullDate: Date,
-  sender: PeerInfo,
+  sender: ?PeerInfo,
   content: MessageContent,
   reactions: MessageReaction[],
   state: MessageState,
