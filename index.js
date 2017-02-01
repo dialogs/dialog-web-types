@@ -344,8 +344,15 @@ export type GroupOnline = {
 
 export type Sticker = {
   id: number,
-  url: string,
-  content: string
+  emoji: ?string,
+  image: ?string
+};
+
+export type StickerPack = {
+  id: number,
+  title: ?string,
+  isOwnedByMe: ?boolean,
+  stickers: Sticker[]
 };
 
 export type CallState = 'calling' | 'connecting' | 'in_progress' | 'ended';
