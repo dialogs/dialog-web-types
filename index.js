@@ -160,14 +160,10 @@ export type MessageContentService = {
 
 export type MessageContentSticker = {
   type: 'sticker',
+  emoji: ?string,
+  image: ?string,
   width: number,
-  height: number,
-  preview: string,
-  fileUrl: ?string,
-  fileName: ?string,
-  fileSize: ?string,
-  fileExtension: ?string,
-  isUploading: boolean
+  height: number
 };
 
 export type MessageContentVoice = {
