@@ -48,8 +48,11 @@ export type Peer = {
   key?: string
 };
 
+export type PeerInfoType = 'user' | 'group' | 'channel';
+
 export type PeerInfo = {
   peer: Peer,
+  type: PeerInfoType,
   title: string,
   userName: ?string,
   avatar: ?string,
