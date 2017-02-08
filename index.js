@@ -56,8 +56,7 @@ export type PeerInfo = {
   title: string,
   userName: ?string,
   avatar: ?string,
-  placeholder: AvatarPlaceholder,
-  isVerified: ?boolean
+  placeholder: AvatarPlaceholder
 };
 
 export type Dialog = {
@@ -298,8 +297,7 @@ export type User = {
   isContact: boolean,
   isBot: boolean,
   isOnline: boolean,
-  isBlocked: boolean,
-  isVerified: ?boolean
+  isBlocked: boolean
 };
 
 export type UserOnline = {
