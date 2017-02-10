@@ -374,7 +374,7 @@ export type CallInfo = {
 
 export type RecentCalls = {
   calls: CallInfo[],
-  nextOffset: string
+  nextOffset: ?string
 };
 
 export type Typing = {
