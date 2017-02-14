@@ -133,7 +133,7 @@ export type MessageContentContact = {
 
 export type MessageContentDocument = {
   type: 'document',
-  preview: string,
+  preview: ?string,
   fileUrl: ?string,
   fileName: ?string,
   fileSize: ?string,
@@ -153,7 +153,7 @@ export type MessageContentPhoto = {
   type: 'photo',
   width: number,
   height: number,
-  preview: string,
+  preview: ?string,
   fileUrl: ?string,
   fileName: ?string,
   fileSize: ?string,
@@ -188,6 +188,7 @@ export type MessageContentVideo = {
   type: 'video',
   width: number,
   height: number,
+  preview: ?string,
   duration: number,
   fileUrl: ?string,
   fileName: ?string,
