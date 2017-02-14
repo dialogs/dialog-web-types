@@ -3,8 +3,15 @@
  * @flow
  */
 
-export type AvatarPlaceholder = 'empty' | 'lblue' | 'blue' | 'purple' |
-                                'red' | 'orange' | 'yellow' | 'green';
+export type AvatarPlaceholder =
+  | 'empty'
+  | 'lblue'
+  | 'blue'
+  | 'purple'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green';
 
 export type AuthError = {
   tag: string,
@@ -78,7 +85,7 @@ export type Recent = {
   state: string,
   sender: string,
   showSender: boolean,
-  isHighlighted: boolean,
+  isHighlighted: boolean
 };
 
 export type ShortRecent = {
@@ -232,7 +239,10 @@ export type MessageMediaAudio = {
   }
 };
 
-export type MessageMedia = MessageMediaImage | MessageMediaWebsite | MessageMediaAudio;
+export type MessageMedia =
+  | MessageMediaImage
+  | MessageMediaWebsite
+  | MessageMediaAudio;
 
 export type MessageContentText = {
   type: 'text',
@@ -245,16 +255,17 @@ export type MessageContentUnsupported = {
   type: 'unsupported'
 };
 
-export type MessageContent = MessageContentUnsupported |
-                             MessageContentContact |
-                             MessageContentDocument |
-                             MessageContentLocation |
-                             MessageContentPhoto |
-                             MessageContentService |
-                             MessageContentSticker |
-                             MessageContentText |
-                             MessageContentVoice |
-                             MessageContentVideo;
+export type MessageContent =
+  | MessageContentUnsupported
+  | MessageContentContact
+  | MessageContentDocument
+  | MessageContentLocation
+  | MessageContentPhoto
+  | MessageContentService
+  | MessageContentSticker
+  | MessageContentText
+  | MessageContentVoice
+  | MessageContentVideo;
 
 export type MessageReaction = {
   uids: number[],
@@ -267,7 +278,13 @@ export type MessageOverlay = {
   dateDivider: string
 };
 
-export type MessageState = 'pending' | 'sent' | 'received' | 'read' | 'error' | 'unknown';
+export type MessageState =
+  | 'pending'
+  | 'sent'
+  | 'received'
+  | 'read'
+  | 'error'
+  | 'unknown';
 
 export type Message = {
   rid: string,
@@ -421,7 +438,6 @@ export type BotCommand = {
   description: string
 };
 
-export type ChatInfo = (
-  { type: 'user', user: ?User, online: ?UserOnline } |
-  { type: 'group', group: ?Group, online: ?GroupOnline }
-);
+export type ChatInfo =
+  | { type: 'user', user: ?User, online: ?UserOnline }
+  | { type: 'group', group: ?Group, online: ?GroupOnline };
