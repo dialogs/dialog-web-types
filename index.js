@@ -117,6 +117,12 @@ export type RawData = {
   data: Uint8Array
 };
 
+export type ImageThumb = {
+  base64: string,
+  width: number,
+  height: number
+};
+
 export type MessageContentContact = {
   type: 'contact',
   name: string,
@@ -170,6 +176,18 @@ export type MessageContentSticker = {
 
 export type MessageContentVoice = {
   type: 'voice',
+  duration: number,
+  fileUrl: ?string,
+  fileName: ?string,
+  fileSize: ?string,
+  fileExtension: ?string,
+  isUploading: boolean
+};
+
+export type MessageContentVideo = {
+  type: 'video',
+  width: number,
+  height: number,
   duration: number,
   fileUrl: ?string,
   fileName: ?string,
@@ -234,7 +252,8 @@ export type MessageContent = MessageContentUnsupported |
                              MessageContentService |
                              MessageContentSticker |
                              MessageContentText |
-                             MessageContentVoice;
+                             MessageContentVoice |
+                             MessageContentVideo;
 
 export type MessageReaction = {
   uids: number[],
