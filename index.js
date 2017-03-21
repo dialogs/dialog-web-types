@@ -389,7 +389,14 @@ export type StickerPack = {
   stickers: Sticker[]
 };
 
-export type CallState = 'connecting_to_server' | 'connecting_to_peer' | 'ringing_outgoing' | 'ringing_incoming' | 'connecting' | 'in_progress' | 'ended';
+export type CallState =
+  | 'connecting_to_server'
+  | 'connecting_to_peer'
+  | 'ringing_outgoing'
+  | 'ringing_incoming'
+  | 'connecting'
+  | 'in_progress'
+  | 'ended';
 
 export type Call = {
   state: CallState,
