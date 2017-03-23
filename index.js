@@ -78,14 +78,8 @@ export type Dialog = {
 };
 
 export type Recent = {
-  peer: PeerInfo,
-  counter: number,
-  text: string,
-  date: Date,
-  state: string,
-  sender: string,
-  showSender: boolean,
-  isHighlighted: boolean
+  info: PeerInfo,
+  counter: number
 };
 
 export type ShortRecent = {
