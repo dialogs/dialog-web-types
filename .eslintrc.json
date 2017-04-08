@@ -4,6 +4,7 @@
     "jest": true
   },
   "rules": {
-    "max-lines": 0
+    "max-lines": 0,
+    "no-use-before-define": 0
   }
 }

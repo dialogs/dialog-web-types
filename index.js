@@ -79,7 +79,8 @@ export type Dialog = {
 
 export type Recent = {
   info: PeerInfo,
-  counter: number
+  counter: number,
+  message: Message
 };
 
 export type ShortRecent = {
