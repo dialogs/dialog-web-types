@@ -80,7 +80,8 @@ export type Dialog = {
 export type Recent = {
   info: PeerInfo,
   counter: number,
-  message: Message
+  message: Message,
+  isMuted: boolean
 };
 
 export type ShortRecent = {
@@ -423,6 +424,7 @@ export type Typing = {
 
 export type ProfileSettings = {
   isSendByEnter: boolean,
+  isCounterIncludeMuted: boolean,
   isSoundEffectsEnabled: boolean,
   isOnlyMentionNotifications: boolean,
   isGroupsNotificationsEnabled: boolean,
