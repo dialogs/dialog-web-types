@@ -3,6 +3,37 @@
  * @flow
  */
 
+import type {
+  BotApiActionConfirm,
+  BotApiActionButton,
+  BotApiSelectOption,
+  BotApiSelectOptionGroup,
+  BotApiActionSelect,
+  BotApiAttachmentAction
+} from './src/bot-api';
+import type {
+  MessageMedia,
+  MessageMediaImage,
+  MessageMediaAudio,
+  MessageMediaWebsite,
+  MessageMediaInteractive
+} from './src/message-media';
+
+export type {
+  BotApiActionConfirm,
+  BotApiActionButton,
+  BotApiSelectOption,
+  BotApiSelectOptionGroup,
+  BotApiActionSelect,
+  BotApiAttachmentAction,
+
+  MessageMedia,
+  MessageMediaImage,
+  MessageMediaAudio,
+  MessageMediaWebsite,
+  MessageMediaInteractive
+};
+
 export type AvatarPlaceholder =
   | 'empty'
   | 'lblue'
@@ -200,50 +231,10 @@ export type MessageContentVideo = {
   isUploading: boolean
 };
 
-export type MessageMediaImage = {
-  type: 'image',
-  content: {
-    url: string,
-    width: number,
-    height: number,
-    fileSize: string
-  }
-};
-
-export type MessageMediaWebsite = {
-  type: 'webpage',
-  content: {
-    url: ?string,
-    title: ?string,
-    description: ?string,
-    image: ?{
-      url: string,
-      width: number,
-      height: number,
-      fileSize: string
-    }
-  }
-};
-
-export type MessageMediaAudio = {
-  type: 'audio',
-  content: {
-    fileUrl: string,
-    fileSize: number,
-    mimeType: string,
-    duration: number
-  }
-};
-
-export type MessageMedia =
-  | MessageMediaImage
-  | MessageMediaWebsite
-  | MessageMediaAudio;
-
 export type MessageContentText = {
   type: 'text',
   text: string,
-  media: ?MessageMedia,
+  media: MessageMedia[],
   extensions: RawData[]
 };
 
@@ -252,16 +243,16 @@ export type MessageContentUnsupported = {
 };
 
 export type MessageContent =
-  | MessageContentUnsupported
+  | MessageContentText
+  | MessageContentPhoto
+  | MessageContentVoice
+  | MessageContentVideo
+  | MessageContentService
   | MessageContentContact
+  | MessageContentSticker
   | MessageContentDocument
   | MessageContentLocation
-  | MessageContentPhoto
-  | MessageContentService
-  | MessageContentSticker
-  | MessageContentText
-  | MessageContentVoice
-  | MessageContentVideo;
+  | MessageContentUnsupported;
 
 export type MessageReaction = {
   uids: number[],
