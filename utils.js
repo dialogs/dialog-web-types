@@ -3,7 +3,7 @@
  * @flow
  */
 
-import type { Peer, Group } from './index';
+import type { Peer, Group } from './src';
 
 export function isUserPeer(peer: Peer): boolean {
   return peer.type === 'user';

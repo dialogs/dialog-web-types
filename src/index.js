@@ -10,14 +10,14 @@ import type {
   BotApiSelectOptionGroup,
   BotApiActionSelect,
   BotApiAttachmentAction
-} from './src/bot-api';
+} from './bot-api';
 import type {
   MessageMedia,
   MessageMediaImage,
   MessageMediaAudio,
   MessageMediaWebsite,
   MessageMediaInteractive
-} from './src/message-media';
+} from './message-media';
 
 export type {
   BotApiActionConfirm,
