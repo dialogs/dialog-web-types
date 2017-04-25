@@ -234,7 +234,7 @@ export type MessageContentVideo = {
 export type MessageContentText = {
   type: 'text',
   text: string,
-  media: MessageMedia[],
+  media: Array<?MessageMedia>,
   extensions: RawData[]
 };
 
