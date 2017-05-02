@@ -386,11 +386,14 @@ export type CallState =
   | 'ended';
 
 export type Call = {
-  state: CallState,
   peer: Peer,
+  state: CallState,
   members: PeerInfo[],
+  ownVideos: HTMLVideoElement[],
+  theirVideos: HTMLVideoElement[],
   isMuted: boolean,
-  isOutgoing: boolean
+  isOutgoing: boolean,
+  isCameraOn: boolean
 };
 
 export type CallInfo = {
