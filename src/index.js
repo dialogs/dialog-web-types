@@ -372,8 +372,8 @@ export type Sticker = {
 export type StickerPack = {
   id: number,
   title: ?string,
-  isOwnedByMe: ?boolean,
-  stickers: Sticker[]
+  stickers: Sticker[],
+  isOwnedByMe: ?boolean
 };
 
 export type CallState =
@@ -389,11 +389,12 @@ export type Call = {
   peer: Peer,
   state: CallState,
   members: PeerInfo[],
-  ownVideos: HTMLVideoElement[],
-  theirVideos: HTMLVideoElement[],
+  ownVideos: MediaSource[],
+  theirVideos: MediaSource[],
   isMuted: boolean,
   isOutgoing: boolean,
-  isCameraOn: boolean
+  isCameraOn: boolean,
+  isScreenSharingOn: boolean
 };
 
 export type CallInfo = {
