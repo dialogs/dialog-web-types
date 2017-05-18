@@ -273,6 +273,21 @@ export type MessageState =
   | 'error'
   | 'unknown';
 
+export type MessageAttachmenReply = {
+  type: 'reply',
+  messages: Message[]
+};
+
+export type MessageAttachmenForward = {
+  type: 'forward',
+  from: ?PeerInfo,
+  messages: Message[]
+};
+
+export type MessageAttachment =
+  | MessageAttachmenReply
+  | MessageAttachmenForward;
+
 export type Message = {
   rid: string,
   date: string,
@@ -280,6 +295,7 @@ export type Message = {
   sender: ?PeerInfo,
   content: MessageContent,
   reactions: MessageReaction[],
+  attachment: ?MessageAttachment,
   state: MessageState,
   sortKey: string,
   sortDate: number,
