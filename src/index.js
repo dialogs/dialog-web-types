@@ -401,12 +401,18 @@ export type CallState =
   | 'in_progress'
   | 'ended';
 
+export type CallVideo = {
+  stream: MediaSource,
+  isMirrored: boolean
+};
+
 export type Call = {
   peer: Peer,
   state: CallState,
+  startTime: number,
   members: PeerInfo[],
-  ownVideos: MediaSource[],
-  theirVideos: MediaSource[],
+  ownVideos: CallVideo[],
+  theirVideos: CallVideo[],
   isMuted: boolean,
   isOutgoing: boolean,
   isCameraOn: boolean,
