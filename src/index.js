@@ -94,6 +94,7 @@ export type PeerInfo = {
   title: string,
   userName: ?string,
   avatar: ?string,
+  bigAvatar: ?string,
   placeholder: AvatarPlaceholder
 };
 
