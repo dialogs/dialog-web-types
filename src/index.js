@@ -407,7 +407,8 @@ export type CallVideo = {
 };
 
 export type Call = {
-  peer: Peer,
+  id: string,
+  peer: PeerInfo,
   state: CallState,
   startTime: number,
   members: PeerInfo[],
