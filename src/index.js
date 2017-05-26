@@ -291,6 +291,7 @@ export type MessageAttachment =
 
 export type Message = {
   rid: string,
+  mid: string,
   date: string,
   fullDate: Date,
   sender: ?PeerInfo,
