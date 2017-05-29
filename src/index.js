@@ -4,6 +4,10 @@
  */
 
 import type {
+  Field,
+  Binding
+} from './utils';
+import type {
   BotApiActionConfirm,
   BotApiActionButton,
   BotApiSelectOption,
@@ -20,6 +24,9 @@ import type {
 } from './message-media';
 
 export type {
+  Field,
+  Binding,
+
   BotApiActionConfirm,
   BotApiActionButton,
   BotApiSelectOption,
@@ -65,10 +72,6 @@ export type AuthSession = {
   authLocation: string,
   latitude: number,
   longitude: number
-};
-
-export type Binding = {
-  unbind: () => void
 };
 
 export type Contact = {
