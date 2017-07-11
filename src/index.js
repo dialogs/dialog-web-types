@@ -259,8 +259,9 @@ export type MessageContent =
   | MessageContentUnsupported;
 
 export type MessageReaction = {
+  code: string,
+  count: number,
   uids: number[],
-  reaction: string,
   isOwnSet: boolean
 };
 
