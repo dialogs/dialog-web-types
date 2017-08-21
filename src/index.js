@@ -306,7 +306,8 @@ export type Message = {
   sortKey: string,
   sortDate: number,
   isOut: boolean,
-  isOnServer: boolean
+  isOnServer: boolean,
+  isEdited?: boolean
 };
 
 export type MessagesUpdate = {
