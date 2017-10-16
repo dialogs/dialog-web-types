@@ -81,7 +81,7 @@ export type Contact = {
   avatar: ?string
 };
 
-export type PeerType = 'user' | 'group';
+export type PeerType = 'user' | 'group' | 'sip';
 
 export type Peer = {
   id: number,
@@ -89,7 +89,7 @@ export type Peer = {
   key?: string
 };
 
-export type PeerInfoType = 'user' | 'group' | 'channel';
+export type PeerInfoType = 'user' | 'group' | 'channel' | 'sip';
 
 export type PeerInfo = {
   peer: Peer,
