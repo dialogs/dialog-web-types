@@ -8,37 +8,36 @@ import type {
   Binding
 } from './utils';
 import type {
-  BotApiActionConfirm,
-  BotApiActionButton,
-  BotApiSelectOption,
-  BotApiSelectOptionGroup,
-  BotApiActionSelect,
-  BotApiAttachmentAction
-} from './bot-api';
-import type {
   MessageMedia,
   MessageMediaImage,
   MessageMediaAudio,
   MessageMediaWebsite,
-  MessageMediaInteractive
+  MessageMediaInteractive,
+  MessageMediaInteractiveButton,
+  MessageMediaInteractiveSelectOption,
+  MessageMediaInteractiveSelect,
+  MessageMediaInteractiveWidget,
+  MessageMediaInteractiveConfirm,
+  MessageMediaInteractiveStyle,
+  MessageMediaInteractiveAction
 } from './message-media';
 
 export type {
   Field,
   Binding,
 
-  BotApiActionConfirm,
-  BotApiActionButton,
-  BotApiSelectOption,
-  BotApiSelectOptionGroup,
-  BotApiActionSelect,
-  BotApiAttachmentAction,
-
   MessageMedia,
   MessageMediaImage,
   MessageMediaAudio,
   MessageMediaWebsite,
-  MessageMediaInteractive
+  MessageMediaInteractive,
+  MessageMediaInteractiveButton,
+  MessageMediaInteractiveSelectOption,
+  MessageMediaInteractiveSelect,
+  MessageMediaInteractiveWidget,
+  MessageMediaInteractiveConfirm,
+  MessageMediaInteractiveStyle,
+  MessageMediaInteractiveAction
 };
 
 export type AvatarPlaceholder =

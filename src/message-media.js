@@ -3,8 +3,6 @@
  * @flow
  */
 
-import type { BotApiAttachment } from './bot-api';
-
 export type MessageMediaImage = {
   type: 'image',
   content: {
@@ -40,9 +38,47 @@ export type MessageMediaWebsite = {
   }
 };
 
+export type MessageMediaInteractiveButton = {
+  type: 'button',
+  value: string,
+  label?: ?string
+};
+
+export type MessageMediaInteractiveSelectOption = {
+  value: string,
+  label: string
+}
+
+export type MessageMediaInteractiveSelect = {
+  type: 'select',
+  options: MessageMediaInteractiveSelectOption[],
+  label?: ?string,
+  defaultValue?: ?string
+};
+
+export type MessageMediaInteractiveWidget =
+  | MessageMediaInteractiveButton
+  | MessageMediaInteractiveSelect;
+
+export type MessageMediaInteractiveConfirm = {
+  text?: ?string,
+  title?: ?string,
+  ok?: ?string,
+  dismiss?: ?string
+};
+
+export type MessageMediaInteractiveStyle = 'primary' | 'danger' | 'default';
+
+export type MessageMediaInteractiveAction = {
+  id: string,
+  style?: ?MessageMediaInteractiveStyle,
+  widget: MessageMediaInteractiveWidget,
+  confirm?: ?MessageMediaInteractiveConfirm
+};
+
 export type MessageMediaInteractive = {
   type: 'interactive',
-  content: BotApiAttachment
+  content: MessageMediaInteractiveAction[]
 };
 
 export type MessageMedia =
