@@ -76,9 +76,15 @@ export type MessageMediaInteractiveAction = {
   confirm?: ?MessageMediaInteractiveConfirm
 };
 
+export type MessageMediaInteractiveActionGroup = {
+  title?: ?string,
+  description?: ?string,
+  actions: MessageMediaInteractiveAction[]
+};
+
 export type MessageMediaInteractive = {
   type: 'interactive',
-  content: MessageMediaInteractiveAction[]
+  content: MessageMediaInteractiveActionGroup[]
 };
 
 export type MessageMedia =
