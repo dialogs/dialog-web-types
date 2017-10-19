@@ -19,7 +19,8 @@ import type {
   MessageMediaInteractiveWidget,
   MessageMediaInteractiveConfirm,
   MessageMediaInteractiveStyle,
-  MessageMediaInteractiveAction
+  MessageMediaInteractiveAction,
+  MessageMediaInteractiveActionGroup
 } from './message-media';
 
 export type {
@@ -37,7 +38,8 @@ export type {
   MessageMediaInteractiveWidget,
   MessageMediaInteractiveConfirm,
   MessageMediaInteractiveStyle,
-  MessageMediaInteractiveAction
+  MessageMediaInteractiveAction,
+  MessageMediaInteractiveActionGroup
 };
 
 export type AvatarPlaceholder =
