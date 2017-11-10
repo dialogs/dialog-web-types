@@ -117,7 +117,8 @@ export type Recent = {
   info: PeerInfo,
   counter: number,
   message: Message,
-  isMuted: boolean
+  isMuted: boolean,
+  isFavourite: boolean
 };
 
 export type ShortRecent = {
