@@ -47,7 +47,7 @@ export type MessageMediaInteractiveButton = {
 export type MessageMediaInteractiveSelectOption = {
   value: string,
   label: string
-}
+};
 
 export type MessageMediaInteractiveSelect = {
   type: 'select',
@@ -84,6 +84,11 @@ export type MessageMediaInteractiveActionGroup = {
 
 export type MessageMediaInteractive = {
   type: 'interactive',
+  messages: {
+    [locale: string]: {
+      [key: string]: string
+    }
+  },
   content: MessageMediaInteractiveActionGroup[]
 };
 
