@@ -360,9 +360,19 @@ export type UserBlocked = {
 
 export type GroupMember = {
   peerInfo: PeerInfo,
-  isAdmin: boolean,
-  canKick: boolean
+  permissions: GroupMemberPermission[]
 };
+
+export type GroupMemberPermission =
+  | 'kick'
+  | 'invite'
+  | 'update_info'
+  | 'send_message'
+  | 'edit_message'
+  | 'delete_message'
+  | 'edit_shortname'
+  | 'set_permissions'
+  | 'get_integration_token';
 
 export type GroupType = 'group' | 'channel';
 
