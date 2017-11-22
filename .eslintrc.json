@@ -1,5 +1,5 @@
 {
-  "extends": "@dlghq/eslint-config-dialog",
+  "extends": "@dlghq/eslint-config-dialog/base",
   "env": {
     "jest": true
   },
