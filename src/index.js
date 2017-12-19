@@ -3,10 +3,7 @@
  * @flow
  */
 
-import type {
-  Field,
-  Binding
-} from './utils';
+import type { Field, Binding } from './utils';
 import type {
   MessageMedia,
   MessageMediaImage,
@@ -26,7 +23,6 @@ import type {
 export type {
   Field,
   Binding,
-
   MessageMedia,
   MessageMediaImage,
   MessageMediaAudio,
@@ -42,15 +38,7 @@ export type {
   MessageMediaInteractiveActionGroup
 };
 
-export type AvatarPlaceholder =
-  | 'empty'
-  | 'lblue'
-  | 'blue'
-  | 'purple'
-  | 'red'
-  | 'orange'
-  | 'yellow'
-  | 'green';
+export type AvatarPlaceholder = 'empty' | 'lblue' | 'blue' | 'purple' | 'red' | 'orange' | 'yellow' | 'green';
 
 export type AuthError = {
   tag: string,
@@ -248,6 +236,10 @@ export type MessageContentUnsupported = {
   type: 'unsupported'
 };
 
+export type MessageContentDeleted = {
+  type: 'deleted'
+};
+
 export type MessageContent =
   | MessageContentText
   | MessageContentPhoto
@@ -258,7 +250,8 @@ export type MessageContent =
   | MessageContentSticker
   | MessageContentDocument
   | MessageContentLocation
-  | MessageContentUnsupported;
+  | MessageContentUnsupported
+  | MessageContentDeleted;
 
 export type MessageReaction = {
   code: string,
@@ -272,13 +265,7 @@ export type MessageOverlay = {
   dateDivider: string
 };
 
-export type MessageState =
-  | 'pending'
-  | 'sent'
-  | 'received'
-  | 'read'
-  | 'error'
-  | 'unknown';
+export type MessageState = 'pending' | 'sent' | 'received' | 'read' | 'error' | 'unknown';
 
 export type MessageAttachmenReply = {
   type: 'reply',
@@ -291,9 +278,7 @@ export type MessageAttachmenForward = {
   messages: Message[]
 };
 
-export type MessageAttachment =
-  | MessageAttachmenReply
-  | MessageAttachmenForward;
+export type MessageAttachment = MessageAttachmenReply | MessageAttachmenForward;
 
 export type Message = {
   rid: string,
