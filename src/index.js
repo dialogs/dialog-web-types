@@ -38,6 +38,12 @@ export type {
   MessageMediaInteractiveActionGroup
 };
 
+export type AvatarSize = 'small' | 'large' | 'full';
+
+export type Avatar = {
+  url: string
+};
+
 export type AvatarPlaceholder = 'empty' | 'lblue' | 'blue' | 'purple' | 'red' | 'orange' | 'yellow' | 'green';
 
 export type AuthError = {
