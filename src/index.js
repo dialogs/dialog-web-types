@@ -322,11 +322,16 @@ export type Email = {
   email: string
 };
 
-export type UserStatus =
+export type UserStatusType =
   | 'away'
   | 'unset'
   | 'invisible'
   | 'do_not_disturb';
+
+export type UserStatus = {
+  type: ?UserStatusType,
+  text: ?string
+};
 
 export type User = {
   id: number,
