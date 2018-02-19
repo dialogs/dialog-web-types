@@ -322,6 +322,12 @@ export type Email = {
   email: string
 };
 
+export type UserStatus =
+  | 'away'
+  | 'unset'
+  | 'invisible'
+  | 'do_not_disturb';
+
 export type User = {
   id: number,
   name: string,
@@ -333,6 +339,7 @@ export type User = {
   phones: Phone[],
   emails: Email[],
   avatar: ?string,
+  status: ?UserStatus,
   bigAvatar: ?string,
   placeholder: AvatarPlaceholder,
   isContact: boolean,
