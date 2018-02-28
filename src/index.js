@@ -44,7 +44,15 @@ export type Avatar = {
   url: string
 };
 
-export type AvatarPlaceholder = 'empty' | 'lblue' | 'blue' | 'purple' | 'red' | 'orange' | 'yellow' | 'green';
+export type AvatarPlaceholder =
+  | 'empty'
+  | 'lblue'
+  | 'blue'
+  | 'purple'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green';
 
 export type AuthError = {
   tag: string,
@@ -271,7 +279,13 @@ export type MessageOverlay = {
   dateDivider: string
 };
 
-export type MessageState = 'pending' | 'sent' | 'received' | 'read' | 'error' | 'unknown';
+export type MessageState =
+  | 'pending'
+  | 'sent'
+  | 'received'
+  | 'read'
+  | 'error'
+  | 'unknown';
 
 export type MessageAttachmenReply = {
   type: 'reply',
@@ -486,3 +500,11 @@ export type BotCommand = {
 export type ChatInfo =
   | { type: 'user', user: ?User, online: ?UserOnline }
   | { type: 'group', group: ?Group, online: ?GroupOnline };
+
+export type ColorTheme =
+  | 'default'
+  | 'primary'
+  | 'success'
+  | 'danger'
+  | 'info'
+  | 'warning';
