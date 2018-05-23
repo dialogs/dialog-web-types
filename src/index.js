@@ -454,7 +454,8 @@ export type Call = {
   isMuted: boolean,
   isOutgoing: boolean,
   isCameraOn: boolean,
-  isScreenSharingOn: boolean
+  isScreenSharingOn: boolean,
+  fingerprint?: ?string
 };
 
 export type CallInfo = {
