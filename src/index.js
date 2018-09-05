@@ -287,18 +287,18 @@ export type MessageState =
   | 'error'
   | 'unknown';
 
-export type MessageAttachmenReply = {
+export type MessageAttachmentReply = {
   type: 'reply',
   messages: Message[]
 };
 
-export type MessageAttachmenForward = {
+export type MessageAttachmentForward = {
   type: 'forward',
   from: ?PeerInfo,
   messages: Message[]
 };
 
-export type MessageAttachment = MessageAttachmenReply | MessageAttachmenForward;
+export type MessageAttachment = MessageAttachmentReply | MessageAttachmentForward;
 
 export type Message = {
   rid: string,
