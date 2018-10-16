@@ -510,3 +510,10 @@ export type ColorTheme =
   | 'danger'
   | 'info'
   | 'warning';
+
+export type Certificate = {
+  id: string,
+  name: string,
+  issuer: string,
+  fingerprint: string
+};
