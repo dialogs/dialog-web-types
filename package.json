@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/dialogs/dialog-web-types#readme",
   "devDependencies": {
-    "@dlghq/babel-preset-dialog": "3.4.2",
+    "@dlghq/babel-preset-dialog": "3.4.3",
     "@dlghq/eslint-config-dialog": "3.4.0",
     "eslint": "4.19.1",
     "flow-bin": "0.72.0",
