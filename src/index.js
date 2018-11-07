@@ -517,3 +517,7 @@ export type Certificate = {
   issuer: string,
   fingerprint: string
 };
+
+export type Predicate = {
+  [key: string]: Array<string>
+};
