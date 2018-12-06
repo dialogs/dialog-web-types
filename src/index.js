@@ -407,7 +407,8 @@ export type Group = {
   isMember: boolean,
   canSendMessage: ?boolean,
   shortname: ?string,
-  topic: ?string
+  topic: ?string,
+  ext: ?Object
 };
 
 export type GroupOnline = {
