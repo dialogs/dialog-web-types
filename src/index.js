@@ -522,3 +522,9 @@ export type Certificate = {
 export type Predicate = {
   [key: string]: Array<string>
 };
+
+export type RecipientCriteria = {
+  profilePredicates: Predicate[],
+  include?: number[],
+  exclude?: number[]
+};
