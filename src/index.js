@@ -520,7 +520,8 @@ export type Certificate = {
 };
 
 export type Predicate = {
-  [key: string]: Array<string>
+  key: string,
+  values: Array<string>
 };
 
 export type RecipientCriteria = {
