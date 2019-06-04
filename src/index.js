@@ -20,6 +20,11 @@ import type {
   MessageMediaInteractiveActionGroup
 } from './message-media';
 
+type SearchPeerEntityType =
+  | 'user'
+  | 'group'
+  | 'channel';
+
 export type {
   Field,
   Binding,
@@ -150,6 +155,7 @@ export type SearchEntity = {
 export type SearchPeerEntity = {
   peer: Peer,
   title: string,
+  type: SearchPeerEntityType,
   avatar: ?string,
   matchString: ?string
 };
