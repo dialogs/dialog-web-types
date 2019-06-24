@@ -450,6 +450,13 @@ export type CallVideo = {
   isMirrored: boolean
 };
 
+export type DisposedCallReason =
+  |'unsupported_value'
+  |'busy'
+  |'answer_timeout'
+  |'rejected'
+  |'ended';
+
 export type Call = {
   id: string,
   peer: PeerInfo,
@@ -462,7 +469,8 @@ export type Call = {
   isOutgoing: boolean,
   isCameraOn: boolean,
   isScreenSharingOn: boolean,
-  fingerprint?: ?string
+  fingerprint?: ?string,
+  disposedCallReason: DisposedCallReason
 };
 
 export type CallInfo = {
