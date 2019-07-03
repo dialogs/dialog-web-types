@@ -3,7 +3,7 @@
  * @flow
  */
 
-import type { Field, Binding } from "./utils";
+import type { Field, Binding } from './utils';
 import type {
   MessageMedia,
   MessageMediaImage,
@@ -18,9 +18,12 @@ import type {
   MessageMediaInteractiveStyle,
   MessageMediaInteractiveAction,
   MessageMediaInteractiveActionGroup
-} from "./message-media";
+} from './message-media';
 
-type SearchPeerEntityType = "user" | "group" | "channel";
+type SearchPeerEntityType =
+  | 'user'
+  | 'group'
+  | 'channel';
 
 export type {
   Field,
@@ -40,21 +43,21 @@ export type {
   MessageMediaInteractiveActionGroup
 };
 
-export type AvatarSize = "small" | "large" | "full";
+export type AvatarSize = 'small' | 'large' | 'full';
 
 export type Avatar = {
   url: string
 };
 
 export type AvatarPlaceholder =
-  | "empty"
-  | "lblue"
-  | "blue"
-  | "purple"
-  | "red"
-  | "orange"
-  | "yellow"
-  | "green";
+  | 'empty'
+  | 'lblue'
+  | 'blue'
+  | 'purple'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green';
 
 export type AuthError = {
   tag: string,
@@ -86,7 +89,7 @@ export type Contact = {
   avatar: ?string
 };
 
-export type PeerType = "user" | "group" | "sip";
+export type PeerType = 'user' | 'group' | 'sip';
 
 export type Peer = {
   id: number,
@@ -94,7 +97,7 @@ export type Peer = {
   key?: string
 };
 
-export type PeerInfoType = "user" | "group" | "channel" | "sip";
+export type PeerInfoType = 'user' | 'group' | 'channel' | 'sip';
 
 export type PeerInfo = {
   peer: Peer,
@@ -169,7 +172,7 @@ export type ImageThumb = {
 };
 
 export type MessageContentContact = {
-  type: "contact",
+  type: 'contact',
   name: string,
   photo64: string,
   phones: string[],
@@ -177,7 +180,7 @@ export type MessageContentContact = {
 };
 
 export type MessageContentDocument = {
-  type: "document",
+  type: 'document',
   preview: ?string,
   fileUrl: ?string,
   fileName: ?string,
@@ -187,7 +190,7 @@ export type MessageContentDocument = {
 };
 
 export type MessageContentLocation = {
-  type: "location",
+  type: 'location',
   place: ?string,
   street: ?string,
   latitude: number,
@@ -195,7 +198,7 @@ export type MessageContentLocation = {
 };
 
 export type MessageContentPhoto = {
-  type: "photo",
+  type: 'photo',
   width: number,
   height: number,
   preview: ?string,
@@ -207,12 +210,12 @@ export type MessageContentPhoto = {
 };
 
 export type MessageContentService = {
-  type: "service",
+  type: 'service',
   text: string
 };
 
 export type MessageContentSticker = {
-  type: "sticker",
+  type: 'sticker',
   emoji: ?string,
   image: ?string,
   width: number,
@@ -220,7 +223,7 @@ export type MessageContentSticker = {
 };
 
 export type MessageContentVoice = {
-  type: "voice",
+  type: 'voice',
   duration: number,
   fileUrl: ?string,
   fileName: ?string,
@@ -230,7 +233,7 @@ export type MessageContentVoice = {
 };
 
 export type MessageContentVideo = {
-  type: "video",
+  type: 'video',
   width: number,
   height: number,
   preview: ?string,
@@ -243,18 +246,18 @@ export type MessageContentVideo = {
 };
 
 export type MessageContentText = {
-  type: "text",
+  type: 'text',
   text: string,
   media: Array<?MessageMedia>,
   extensions: RawData[]
 };
 
 export type MessageContentUnsupported = {
-  type: "unsupported"
+  type: 'unsupported'
 };
 
 export type MessageContentDeleted = {
-  type: "deleted"
+  type: 'deleted'
 };
 
 export type MessageContent =
@@ -283,27 +286,25 @@ export type MessageOverlay = {
 };
 
 export type MessageState =
-  | "pending"
-  | "sent"
-  | "received"
-  | "read"
-  | "error"
-  | "unknown";
+  | 'pending'
+  | 'sent'
+  | 'received'
+  | 'read'
+  | 'error'
+  | 'unknown';
 
 export type MessageAttachmentReply = {
-  type: "reply",
+  type: 'reply',
   messages: Message[]
 };
 
 export type MessageAttachmentForward = {
-  type: "forward",
+  type: 'forward',
   from: ?PeerInfo,
   messages: Message[]
 };
 
-export type MessageAttachment =
-  | MessageAttachmentReply
-  | MessageAttachmentForward;
+export type MessageAttachment = MessageAttachmentReply | MessageAttachmentForward;
 
 export type Message = {
   rid: string,
@@ -342,11 +343,11 @@ export type Email = {
 };
 
 export type UserStatusType =
-  | "away"
-  | "unset"
-  | "invisible"
-  | "do_not_disturb"
-  | "busy";
+  | 'away'
+  | 'unset'
+  | 'invisible'
+  | 'do_not_disturb'
+  | 'busy';
 
 export type UserStatus = {
   type: ?UserStatusType,
@@ -388,17 +389,17 @@ export type GroupMember = {
 };
 
 export type GroupMemberPermission =
-  | "kick"
-  | "invite"
-  | "update_info"
-  | "send_message"
-  | "edit_message"
-  | "delete_message"
-  | "edit_shortname"
-  | "set_permissions"
-  | "get_integration_token";
+  | 'kick'
+  | 'invite'
+  | 'update_info'
+  | 'send_message'
+  | 'edit_message'
+  | 'delete_message'
+  | 'edit_shortname'
+  | 'set_permissions'
+  | 'get_integration_token';
 
-export type GroupType = "group" | "channel";
+export type GroupType = 'group' | 'channel';
 
 export type Group = {
   id: number,
@@ -437,13 +438,13 @@ export type StickerPack = {
 };
 
 export type CallState =
-  | "connecting_to_server"
-  | "connecting_to_peer"
-  | "ringing_outgoing"
-  | "ringing_incoming"
-  | "connecting"
-  | "in_progress"
-  | "ended";
+  | 'connecting_to_server'
+  | 'connecting_to_peer'
+  | 'ringing_outgoing'
+  | 'ringing_incoming'
+  | 'connecting'
+  | 'in_progress'
+  | 'ended';
 
 export type CallVideo = {
   stream: MediaSource,
@@ -495,7 +496,7 @@ export type ProfileSettings = {
   isShowNotificationsTextEnabled: boolean
 };
 
-export type ConnectionStatus = "online" | "connecting" | "updating";
+export type ConnectionStatus = 'online' | 'connecting' | 'updating';
 
 export type Counter = {
   counter: number
@@ -507,16 +508,16 @@ export type BotCommand = {
 };
 
 export type ChatInfo =
-  | { type: "user", user: ?User, online: ?UserOnline }
-  | { type: "group", group: ?Group, online: ?GroupOnline };
+  | { type: 'user', user: ?User, online: ?UserOnline }
+  | { type: 'group', group: ?Group, online: ?GroupOnline };
 
 export type ColorTheme =
-  | "default"
-  | "primary"
-  | "success"
-  | "danger"
-  | "info"
-  | "warning";
+  | 'default'
+  | 'primary'
+  | 'success'
+  | 'danger'
+  | 'info'
+  | 'warning';
 
 export type Certificate = {
   id: string,
