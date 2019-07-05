@@ -410,6 +410,7 @@ export type Group = {
   placeholder: AvatarPlaceholder,
   adminId: number,
   members: GroupMember[],
+  membersCount: number,
   isMember: boolean,
   canSendMessage: ?boolean,
   shortname: ?string,
