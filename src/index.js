@@ -346,7 +346,8 @@ export type UserStatusType =
   | 'away'
   | 'unset'
   | 'invisible'
-  | 'do_not_disturb';
+  | 'do_not_disturb'
+  | 'busy';
 
 export type UserStatus = {
   type: ?UserStatusType,
