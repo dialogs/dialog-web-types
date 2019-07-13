@@ -122,6 +122,7 @@ export type Dialog = {
 
 export type Recent = {
   info: PeerInfo,
+  draft: string,
   counter: number,
   message: Message,
   isMuted: boolean,
